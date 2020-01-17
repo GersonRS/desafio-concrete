@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  desafio:
+    image: desafio
+    build: .
+    ports:
+      - 8081:80

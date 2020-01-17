@@ -1,0 +1,206 @@
+.user-name {
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.user-login {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c5c5c;
+}
+
+.user-data {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c5c5c;
+}
+
+.repo-name {
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ac53f2;
+}
+
+.repo-description {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.star-count {
+  height: 25px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c5c5c;
+  vertical-align: bottom;
+}
+
+.not-found-message {
+  width: 315px;
+  height: 41px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ac53f2;
+}
+
+.star-icon {
+  vertical-align: middle;
+}
+
+.github-Search {
+  display: inline-block;
+  font-family: Monaco;
+  font-size: 40px;
+  color: #000000;
+}
+
+.github-Search .text-style-1 {
+  font-family: Raleway;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.search-text {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c5c5c;
+}
+
+.search-input {
+
+  border-right-width: 0px;
+  background-color: var(--white);
+}
+
+.search-button {
+  width: 100px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #ac53f2;
+}
+
+.Search-Icon {
+  width: 30px;
+  height: 27px;
+  box-shadow: 0 0 4px NaNpx var(--black-40);
+}
+
+.shadow {
+  box-shadow: 0 0 4px NaNpx var(--black-40);
+  background-color: var(--white);
+}
+
+.White {
+  background-color: var(--white);
+}
+
+.Gray {
+  background-color: #5c5c5c;
+}
+
+.Purple {
+  background-color: #ac53f2;
+}
+
+.card-title {
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.card-subtitle {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c5c5c;
+}
+
+.list-group-item {
+  border: 0px solid rgba(0,0,0,.125);
+}
+
+.card-img-top {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body {
+  padding: 2.25rem;
+}
+
+.card-body ul li {
+  padding: .75rem 0rem;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}

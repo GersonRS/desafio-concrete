@@ -1,0 +1,19 @@
+<div class="center">
+  <div class="relative">
+    <div class="Github-Search">
+      <b>Github</b>
+      <span class="text-style-1"> Search</span>
+    </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="search-bar border border-right-0" >
+        <input class="Search-Input" name="userName" [(ngModel)]="userName" required>
+        <button type="submit" class="search-button" [disabled]="!f.valid">
+          <img src="./assets/images/search-icon.svg" class="Search-Icon">
+        </button>
+        <!-- <div *ngIf="!userName.valid && userName.touched" class="alert alert-danger" role="alert">
+          Campo Obrigatorio
+        </div> -->
+      </div>
+    </form>
+  </div>
+</div>

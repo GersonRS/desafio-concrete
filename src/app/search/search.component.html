@@ -1,0 +1,140 @@
+<div class="container-fluid">
+  <div class="row py-4">
+    <div class="col-12 col-sm-4 col-md-4 text-center">
+      <a routerLink="/" class="text-decoration-none github-Search"><b>Github</b> <span class="text-style-1">
+          Search</span></a>
+    </div>
+    <div class="col-12 col-sm-8 col-md-8">
+      <form #f="ngForm" (ngSubmit)="newSearch()">
+        <div class="input-group input-group-lg shadow">
+          <input type="text" class="form-control search-input search-text" name="userName" [(ngModel)]="userName"
+            required >
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary search-button" type="submit" [disabled]="!f.valid">
+              <img src="./assets/images/search-icon.svg" class="Search-Icon" alt="Imagem do Perfil">
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row" *ngIf="user$ | async as user; else userNotFound">
+    <div class="col-12 col-sm-4 col-md-4">
+      <div class="card border-0">
+        <img src="{{ user.avatar_url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h1 class="card-title user-name">
+            {{ user.name }}
+          </h1>
+          <h6 class="card-subtitle user-login">
+            {{ user.login }}
+          </h6>
+          <p class="card-text" *ngIf="user.bio">
+            {{ user.bio }}
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-12">
+                  <span class="user-data">{{ user.email }}</span>
+                  <span class="user-data" *ngIf="!user.email">-------------</span>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/images/organization icon.svg" class="details-icon">
+                </div>
+                <div class="col-10">
+                  <span class="user-data">{{ user.company }}</span>
+                  <span class="user-data" *ngIf="!user.company">-------------</span>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/images/location icon.svg" class="details-icon">
+                </div>
+                <div class="col-10">
+                  <span class="user-data">{{ user.location }}</span>
+                  <span class="user-data" *ngIf="!user.location">-------------</span>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/images/star icon.svg" class="details-icon">
+                </div>
+                <div class="col-10">
+                  <span class="user-data">{{ user.count_stars }}</span>
+                  <span class="user-data" *ngIf="!user.count_stars">0</span>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/images/repositorie icon.svg" class="details-icon">
+                </div>
+                <div class="col-10">
+                  <span class="user-data">{{ user.public_repos }}</span>
+                  <span class="user-data" *ngIf="!user.public_repos">0</span>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/images/followers icon.svg" class="details-icon">
+                </div>
+                <div class="col-10">
+                  <span class="user-data">{{ user.followers }}</span>
+                  <span class="user-data" *ngIf="!user.followers">0</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-8 col-md-8" *ngIf="repositories$ | async as repositories">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let repositore of repositories">
+          <div class="container-fluid">
+            <div class="row">
+              <h1 class="repo-name text-capitalize">
+                {{ repositore.name }}
+              </h1>
+            </div>
+            <div class="row">
+              <p class="repo-description">
+                {{ repositore.description }}
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <img src="./assets/images/star icon.svg" class="star-icon">
+              </div>
+              <div class="col-1">
+                <span class="star-count">{{ repositore.stargazers_count }}</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ng-template #userNotFound>
+    <div class="row" *ngIf="error$ | async; else loading" style="height: 150px;">
+      <p class="not-found-message text-center">User not found :(</p>
+    </div>
+    <ng-template #loading>
+      <div class="row" style="height: 150px;">
+        <p class="not-found-message text-center">Carregando...</p>
+      </div>
+    </ng-template>
+  </ng-template>
+</div>
